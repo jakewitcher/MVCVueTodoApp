@@ -1,0 +1,13 @@
+﻿@model MVCVueTodoApp.ViewModels.HomeViewModel
+
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<div id="home-app">
+    <todos :todos="@Json.Encode(Model.Todos)"></todos>
+</div>
+
+@section scripts {
+    <script src="/dist/js/components/home.js"></script>
+}
